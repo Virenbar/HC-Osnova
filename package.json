@@ -10,19 +10,21 @@
   },
   "main": "index.js",
   "scripts": {
+    "build": "tsc -b",
     "start": "node build/index.js",
-    "start:dev": "tsc && node build/index.js",
-    "build": "tsc"
+    "start:dev": "yarn build && node build/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "undici": "^5.12.0"
+  },
   "devDependencies": {
     "@tsconfig/node16-strictest-esm": "^1.0.3",
     "@types/node": "^16.0.0",
-    "typescript": "^4.7.4",
-    "@typescript-eslint/eslint-plugin": "^5.31.0",
-    "@typescript-eslint/parser": "^5.31.0",
+    "@typescript-eslint/eslint-plugin": "^5.40.0",
+    "@typescript-eslint/parser": "^5.40.0",
+    "eslint": "^8.20.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint": "^8.20.0"
+    "typescript": "^4.8.4"
   },
   "engines": {
     "node": "16.x"

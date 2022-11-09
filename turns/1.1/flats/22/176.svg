@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="/template/__cache/85bf21/css/vendors.css" rel="stylesheet" type="text/css">
+    <link href="/template/__cache/85bf21/css/main.css" rel="stylesheet" type="text/css">
+    </head>
+      <body class="__no-scroll">
+        <style>
+          body.__no-scroll {
+            overflow-y: scroll;
+            overflow-x: hidden;
+          }
+          #app {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+          }
+          #app.__visible {
+            opacity: 1;
+          }
+          .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: #fff;
+          }
+          #loader-logo {
+            width: 670px;
+            max-width: 100%;
+            animation: loader-fade-in .5s ease-in-out;
+          }
+          #loader-logo path {
+            stroke-dasharray: 127, 129;
+            stroke-dashoffset: 127;
+            stroke-width: .6;
+            will-change: stroke-dashoffset;
+            animation: loader-stroke 1s forwards;
+          }
+          .loader.__hidden {
+            opacity: 0;
+            z-index: -1;
+            pointer-events: none;
+            display: none;
+          }
+          @keyframes loader-stroke {
+            100% {
+              stroke-dashoffset: 0;
+            }
+          }
+          @keyframes loader-fade-in {
+            0% {
+              transform: translateY(10px);
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        </style>
+        <div class="loader">
+          <svg id="loader-logo" ref="logo" viewBox="0 0 203 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.8105 19.5671H39.426V9.80884H12.8105V19.5671ZM15.1567 12.1643H37.079V17.2107H15.1567V12.1643Z" stroke="#000"></path>
+            <path d="M111.457 19.5671H138.072V9.80884H111.457V19.5671ZM113.803 12.1643H135.725V17.2107H113.803V12.1643Z" stroke="#000"></path>
+            <path d="M176.105 9.80884V19.5671H178.453V17.4595H200.375V19.5671H202.722V9.80884H176.105ZM200.375 12.1643V15.103H178.453V12.1643H200.375Z" stroke="#000"></path>
+            <path d="M168.042 9.80884H143.781V14.6875V19.5662H170.397V13.5093H168.042V9.80884ZM168.051 17.2107H146.128V14.6875V12.1643H165.695V13.5093H159.285L161.919 15.8657H168.051V17.2107Z" stroke="#000"></path>
+            <path d="M103.401 13.5093H81.4789V9.80884H79.1318V19.5671H81.4789V15.8657H103.401V19.5671H105.748V9.80884H103.401V13.5093Z" stroke="#000"></path>
+            <path d="M46.8076 19.5671H72.2504V17.2107H49.1538V12.1643H72.2504V9.80884H46.8076V19.5671Z" stroke="#000"></path>
+            <path d="M0.87207 5.07352L2.65007 2.6688L0.926527 0.675049H2.34148L3.68383 2.26878V0.675049H4.84465V2.26878L6.1879 0.675049H7.60286L5.87932 2.6688L7.65731 5.07352H6.22421L5.05431 3.37956L4.84556 3.60736V5.07352H3.68473V3.60736L3.47598 3.37956L2.30608 5.07352H0.87207Z" fill="#000"></path>
+            <path d="M11.0802 5.07352L9.91937 3.37956L9.39296 3.94451V5.07352H8.24121V0.675049H9.39296V2.63235L11.053 0.675049H12.4679L10.7353 2.6688L12.5224 5.07352H11.0802Z" fill="#000"></path>
+          </svg>
+        </div>
+        <div id="resource-path" data-path="/template/__cache/85bf21"></div>
+        <div id="agreement-docs" data-terms="/politic.html"></div>
+        <div id="app">
+            <v-custom-banner></v-custom-banner>
+            <div class="page">
+                <v-header  webcam-link="https://camera.profintel.ru:8605/public/85bda641320540198dd505ca290a8a41">
+                    <template slot="menu">
+                                <li class="v-header_menu_item"><a href="/about/">Преимущества</a></li>
+                                <li class="v-header_menu_item"><a href="/catalog/">Подобрать квартиру</a></li>
+                                <li class="v-header_menu_item"><a href="/payments/">Покупка</a></li>
+                                <li class="v-header_menu_item"><a href="/action/">Акции</a></li>
+                                <li class="v-header_menu_item"><a href="/news/">Новости</a></li>
+                                <li class="v-header_menu_item"><a href="/parking/">Паркинг</a></li>
+                                <li class="v-header_menu_item"><a href="/progress/">Прогресс</a></li>
+                                <li class="v-header_menu_item"><a href="/commerce/">Для бизнеса</a></li>
+                                <li class="v-header_menu_item"><a href="/contacts/">Контакты</a></li>
+                    </template>
+                      <template slot="mob-phone"><a class="v-header_mob-phone callibri_phone" href="tel:+7 (343) 300-8-999">+7 (343) 300-8-999</a></template>
+                    <template slot="phone"><a class="v-header_phone callibri_phone" href="tel:+7 (343) 300-8-999">+7 (343) 300-8-999</a></template>
+                </v-header>
+                <!--<v-banner></v-banner>-->
+
+
+<div class="not-found-wrapper">
+  <div class="not-found pattern-blue">
+    <div class="wrapper">
+      <div class="not-found_content">
+        <h1>Такой страницы<br>на сайте нет</h1>
+        <p>Вы можете <a class="link" href="/">перейти на главную</a><br>или <a class="link" href="/catalog/">выбрать квартиру</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<v-cookies></v-cookies>
+<footer class="footer ">
+  <div class="wrapper">
+    <div class="footer_wrp">
+      <div class="footer_content">
+        <div class="footer_content_row">
+          <div class="footer_content_col">
+                <a class="footer_phone callibri_phone" href="tel:+7 (343) 300-8-999">+7 (343) 300-8-999</a>
+          </div>
+          <div class="footer_content_col __callback">
+            <button class="button __transparent __medium"  @click="showModal('callbackFooter', { goalOnCreate: 'click_oz_podval' })">Обратный звонок</button>
+            <div class="footer_social">
+              <div class="socials">
+                  <a class="socials_item" href="//vk.com/zhk_osnova" rel="nofollow">
+                    <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="34" height="34" fill="#4E6686" class="social-background"></rect> <path d="M16.2959 22.9854H17.4321C17.4321 22.9854 17.7745 22.9469 17.9502 22.7535C18.1112 22.5774 18.1056 22.2487 18.1056 22.2487C18.1056 22.2487 18.084 20.6812 18.7904 20.4542C19.4889 20.2298 20.3835 21.9511 21.3326 22.6133C22.0503 23.1131 22.5957 22.9854 22.5957 22.9854L25.1333 22.9879C25.1333 22.9879 26.4599 22.8849 25.8306 21.8246C25.7796 21.739 25.4644 21.0396 23.9438 19.6072C22.353 18.1067 22.5662 18.3485 24.4824 15.7529C25.6492 14.1729 26.1163 13.2081 25.9701 12.7939C25.8317 12.4008 24.9791 12.4677 24.9791 12.4677L22.1161 12.464C22.1161 12.464 21.904 12.4442 21.7476 12.5409C21.5933 12.6339 21.4947 12.8757 21.4947 12.8757C21.4947 12.8757 21.0423 14.1221 20.4402 15.1638C19.168 17.3589 18.6589 17.4742 18.4514 17.339C17.9672 17.0191 18.0886 16.0629 18.0886 15.3808C18.0886 13.254 18.406 12.366 17.4695 12.1366C17.1599 12.061 16.9309 12.0113 16.1361 12.0027C15.1167 11.9915 14.2538 12.0051 13.7663 12.2482C13.4409 12.4107 13.1903 12.7703 13.3422 12.7914C13.5316 12.8174 13.959 12.9092 14.1858 13.223C14.4783 13.6273 14.4681 14.5363 14.4681 14.5363C14.4681 14.5363 14.6371 17.0414 14.0758 17.3527C13.6903 17.566 13.1619 17.1307 12.0281 15.139C11.4464 14.1184 11.0076 12.97 11.0076 12.97C11.0076 12.97 10.9237 12.7592 10.7729 12.6463C10.5903 12.5099 10.3341 12.4652 10.3341 12.4652L7.61846 12.4665C7.61846 12.4665 7.2114 12.4789 7.06173 12.6575C6.92907 12.8187 7.05152 13.1498 7.05152 13.1498C7.05152 13.1498 9.17639 18.2394 11.5836 20.7866C13.7901 23.1218 16.2959 22.9854 16.2959 22.9854Z" fill="white" class="social-symbol"></path></svg>
+                  </a>
+                  <a class="socials_item" href="//ok.ru/group/56147140477058" rel="nofollow">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="34" height="34" viewBox="0 0 34 34" xml:space="preserve"><rect width="34" height="34" class="social-background" style="fill: rgb(242, 114, 12);"></rect> <g id="OK_1_"><path xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-miterlimit="10" d="M22,17c-0.7,0-2.1,1.4-5,1.4S12.8,17,12,17c-0.8,0-1.4,0.6-1.4,1.4c0,0.7,0.4,1.1,0.7,1.2   c0.9,0.5,3.5,1.6,3.5,1.6l-3,3.8c0,0-0.6,0.6-0.6,1.1c0,0.8,0.6,1.4,1.4,1.4c0.7,0,1.1-0.5,1.1-0.5l3.3-3.8l3.2,3.8   c0,0,0.4,0.5,1.1,0.5c0.8,0,1.4-0.6,1.4-1.4c0-0.4-0.6-1.1-0.6-1.1l-3-3.8c0,0,2.7-1.1,3.5-1.6c0.3-0.2,0.7-0.5,0.7-1.2   C23.4,17.6,22.7,17,22,17z" fill="none" class="social-symbol-stroke"></path> <path xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-miterlimit="10" d="M17,6.4c-2.8,0-5,2.2-5,5s2.2,5,5,5s5-2.2,5-5S19.8,6.4,17,6.4z M17,13.8   c-1.3,0-2.5-1.1-2.5-2.5s1.1-2.5,2.5-2.5s2.5,1.1,2.5,2.5S18.3,13.8,17,13.8z" fill="none" class="social-symbol-stroke"></path></g></svg>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_content_row">
+          <div class="footer_content_col __office">
+            <h4 class="footer_content_col_title">Офис продаж застройщика <br> ООО CЗ «Фортис»</h4>
+            <p>ИНН 6671084747</p>
+            <p>ОГРН 1186658023353</p>
+            <p>
+                <a class="link" href="mailto:info@osnova-house.ru">info@osnova-house.ru</a>
+            </p>
+            <p>
+                <a class="link" href="/docs/">Строительная документация </a>
+            </p>
+          </div>
+          <div class="footer_content_col __address_and_links">
+            <p class="__address">
+                <a class="link" href="/contacts/">
+                  г. Екатеринбург, Куйбышева, 41
+                </a><br>
+                <span>09:00 — 21:00 ежедневно</span>
+                <span></span>
+            </p>
+            <div>
+                <p>
+                    <a class="link" href="/about/infrastructure/">Квартиры в новостройке Пионерского района</a>
+                </p>
+                <p>
+                    <a class="link" href="/about/comfort-plus/">Преимущества квартир комфорт-класса</a>
+                </p>
+                <p>
+                    <a class="link" href="/commerce/">Коммерческая недвижимость</a>
+                </p>
+                <p>
+                    <a class="link" href="/catalog/?choose=list">Выбрать квартиру по адресу ул. Уральская, 5</a>
+                </p>
+                <p>
+                    <a class="link" href="/parking/">Купить парковочное место</a>
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_info">
+        <div class="footer_dev"><a class="footer_dev_logo" href="https://phoenix-cg.ru">
+        <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8209 0C18.9831 5.41753 18.5078 12.7577 13.919 17.4104C13.66 16.6853 13.4406 15.9418 13.2853 15.1861C13.6478 13.3427 13.6052 11.478 13.2578 9.63455L13.0963 8.77225L12.9775 9.64369C12.7094 11.6151 12.5936 13.2117 12.9958 15.1892C12.8404 15.9662 12.6119 16.7279 12.3163 17.4622C7.68186 12.8156 7.1852 5.43886 11.3626 0C9.05909 0.353449 7.04199 1.2127 5.37225 2.42235C4.19916 7.0629 5.40576 11.024 8.20594 14.531C5.1681 11.6212 3.49836 8.14153 3.66594 3.89709C1.95658 5.65824 0.792638 7.85511 0.28684 10.2226C1.31672 12.645 2.99256 14.4853 5.12544 15.9205C3.15405 15.11 1.4325 13.8759 0.0247993 12.1148C-0.12755 14.5676 0.41786 17.1149 1.77681 19.4793C5.1681 20.6768 9.68068 20.5001 13.0842 18.1966L13.0902 18.1935C16.4937 20.5001 21.0063 20.6768 24.4006 19.4793C25.7596 17.1149 26.305 14.5676 26.1526 12.1148C24.7449 13.8759 23.0234 15.11 21.052 15.9205C23.1879 14.4884 24.8638 12.645 25.8906 10.2226C25.3848 7.85816 24.2209 5.65824 22.5115 3.89709C22.6791 8.14153 21.0093 11.6212 17.9715 14.531C20.7717 11.024 21.9813 7.0629 20.8052 2.42235C19.1354 1.2127 17.1184 0.353449 14.8148 0L14.8209 0Z" fill="#E01017"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.0784 21.5059C18.8583 21.6948 15.6285 20.4669 13.0995 18.2456C10.0768 20.6466 6.74952 21.6735 3.16016 21.5059C4.10473 22.554 5.1468 23.4285 6.25591 24.1263C7.24923 23.7789 8.09934 23.3493 8.86109 22.8709C8.24559 23.459 7.58135 23.9983 6.8653 24.4858C8.22427 25.2476 9.67464 25.7503 11.1524 25.988C11.8685 25.2293 12.4992 24.3609 13.0873 23.4285C13.6449 24.3396 14.2756 25.2049 15.0221 26.0002C16.4999 25.7716 17.9594 25.275 19.3489 24.498C18.6115 24.0196 17.9411 23.4773 17.3317 22.8801C18.1361 23.3767 19.0045 23.8063 19.9704 24.1293C21.0674 23.4377 22.1155 22.5662 23.0814 21.5059H23.0784Z" fill="#E01017"/>
+        </svg>
+</a>    <span>Сделано креативной группой «<a class="link __dark" href="https://phoenix-cg.ru" target="_blank">Феникс</a>»</span></div>
+<a c    lass="footer_offer link __dark" href="#">Оферта</a>
+      </div>
+    </div>
+  </div>
+</footer>
+      <v-album-modal :info="modalData" v-if="modalId === 'album-modal'"></v-album-modal>
+      <v-modal v-if="modalId === 'flat-card'" @close="closeModal">
+        <v-flat-card :flat="modalData.currentFlat" :floor="modalData.currentFloor"></v-flat-card>
+      </v-modal>
+      <v-form-modal :flat-id="modalData.flatId" v-if="modalId === 'flat-order'" @submit="$root.reachGoal('click_planirovki')" @success="$root.reachGoal('otpravka_planirovki')" @close="closeModal">
+        <template slot="title" v-if="modalData.reserved">Встать в очередь на бронь</template>
+        <template slot="title" v-else>Заявка</template>
+        <template slot="desc"><span class="fs-12" v-if="modalData.reserved">Наш менеджер, свяжется с вами, если данная квартира освободится.</span><span class="fs-12" v-else>Наш менеджер перезвонит, ответит на вопросы и закрепит за вами квартиру</span></template>
+      </v-form-modal>
+      <v-form-modal @close="closeModal" v-if="modalId === 'callbackHeader'" @submit="$root.reachGoal('click_otpr_oz')" @success="$root.reachGoal('otpravka_oz')">
+        <template slot="title">Обратный звонок</template>
+        <template slot="desc"><span class="fs-12">Оставьте свои контактные данные и наш менеджер вскоре с вами свяжется</span></template>
+      </v-form-modal>
+      <v-form-modal class="parking-form" :flat-id="modalData.id" @close="closeModal" v-if="modalId === 'callbackParking'">
+        <template slot="title">Заявка</template>
+        <template slot="desc">
+          <p class="fs-12">{{ modalData.name }}: {{ modalData.number }}</p>
+          <p class="fs-12">Площадь: {{ modalData.area }}</p>
+          <p class="fs-12">Стоимость: {{ modalData.price }}</p>
+        </template>
+      </v-form-modal>
+      <v-form-modal class="parking-form" :flat-id="modalData.id" @close="closeModal" v-if="modalId === 'callbackParkingReserved'">
+        <template slot="title">Встать в очередь на бронь</template>
+        <template slot="desc">
+          <p class="fs-12">{{ modalData.name }}: {{ modalData.number }}</p>
+          <p class="fs-12">Площадь: {{ modalData.area }}</p>
+          <p class="fs-12">Стоимость: {{ modalData.price }}</p>
+        </template>
+      </v-form-modal>
+      <v-form-modal @close="closeModal" v-if="modalId === 'callbackFlat'" @submit="$root.reachGoal('click_otpravit_kvartira')" @success="$root.reachGoal('otpravka_kvartira')">
+        <template slot="title">Обратный звонок</template>
+        <template slot="desc"><span class="fs-12">Оставьте свои контактные данные и наш менеджер вскоре с вами свяжется</span></template>
+      </v-form-modal>
+      <v-form-modal @close="closeModal" v-if="modalId === 'callbackFooter'" @submit="$root.reachGoal('click_otpravit_podval')" @success="$root.reachGoal('otpravka_podval')">
+        <template slot="title">Обратный звонок</template>
+        <template slot="desc"><span class="fs-12">Оставьте свои контактные данные и наш менеджер вскоре с вами свяжется</span></template>
+      </v-form-modal>
+      <v-form-modal @close="closeModal" v-if="modalId === 'callback-contacts'" @submit="$root.reachGoal('click_kontakt')" @success="$root.reachGoal('otpravka_kontakt')">
+        <template slot="title">Обратный звонок</template>
+        <template slot="desc"><span class="fs-12">Оставьте свои контактные данные и наш менеджер вскоре с вами свяжется</span></template>
+      </v-form-modal>
+      <v-modal @close="closeModal" v-if="modalId === 'image-view'">
+        <img class="modal-img" :src="modalData" alt="">
+      </v-modal>
+    <v-form-modal class="__bike" @close="closeModal" v-if="modalId === 'callbackBike'"
+      @submit="$root.reachGoal('click_otpr_oz')" @success="$root.reachGoal('otpravka_oz')"><template slot="plan">
+        <p>Индивидуальная велосипедная &#8470; {{ modalData.number }} на&nbsp;плане этажа</p>
+        <v-floor :turn-id="modalData.turnId" :floor-id="modalData.floorId" :active-flat-id="1" modal></v-floor>
+      </template><template slot="title" v-if="modalData.status==='reserv'">Встать в очередь на бронь</template><template
+        slot="title" v-else>Заявка на бронирование</template><template slot="desc">
+        <p class="fs-12">Этаж: {{ modalData.floor }}</p>
+        <p class="fs-12">Площадь: {{ modalData.area }}</p>
+        <p class="fs-12">Стоимость: {{ modalData.price }}</p>
+      </template></v-form-modal>
+    <v-form-modal @close="closeModal" v-if="modalId === 'callbackBikeSimple'" @submit="$root.reachGoal('click_otpr_oz')"
+      @success="$root.reachGoal('otpravka_oz')"><template slot="title" v-if="modalData.status==='reserv'">Встать в
+        очередь на бронь</template><template slot="title" v-else>Заявка на бронирование</template><template slot="desc">
+        <p class="fs-12">Этаж: {{ modalData.floor }}</p>
+        <p class="fs-12">Площадь: {{ modalData.area }}</p>
+        <p class="fs-12">Стоимость: {{ modalData.price }}</p>
+      </template></v-form-modal>
+      <v-modal class="modal-success" @close="closeModal" v-if="modalId === 'success'">
+        <h2>Заявка отправлена</h2>
+        <p>наш менеджер вскоре с вами свяжется</p>
+      </v-modal>
+      <v-modal class="commerce-plan-modal" v-if="modalId === 'commerce-plan'" @close="closeModal">
+        <img class="commerce-plan" :src="modalData.commercePlan">
+      </v-modal>
+      <v-modal class="commerce-plan-modal" v-if="modalId === 'flat-view'" @close="closeModal">
+        <img class="flat-modal_views-img" :src="modalData">
+      </v-modal>
+      <v-modal v-if="modalId === 'parking-plan'" @close="closeModal">
+        <v-basement-plan :data="modalData"></v-basement-plan>
+      </v-modal>
+    </div>
+    <script type="text/javascript" src="/template/__cache/85bf21/js/vendors.js"></script>
+    <script type="text/javascript" src="/template/__cache/85bf21/js/main.js"></script>
+    
+  </body>
+</html>
+
+

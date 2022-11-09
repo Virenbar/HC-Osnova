@@ -1,0 +1,14 @@
+{
+    "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+    "compilerOptions": {
+        "outDir": "build",
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "noUncheckedIndexedAccess": false,
+        "moduleResolution": "NodeNext"
+    },
+    "include": [
+        "src/**/*"
+    ]
+}

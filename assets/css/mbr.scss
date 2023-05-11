@@ -1,0 +1,110 @@
+// Styles based on http://mbrserver.com/
+@mixin overlay {
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scanlines {
+  @include overlay();
+  z-index: 5;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 2px, 3px 100%;
+}
+
+.scanline {
+  @include overlay();
+  top: 0%;
+  height: 2px;
+  z-index: 10;
+  background: rgba(0, 0, 0, .3);
+  opacity: 0.75;
+  animation: scanline 7.77s linear infinite;
+}
+
+.flicker {
+  @include overlay();
+  z-index: 15;
+  background: rgba(9, 8, 8, 0.1);
+  animation: flicker 0.3301s infinite;
+}
+
+$opacities: (
+  0% 0.119,
+  5% 0.02841,
+  10% 0.35748,
+  15% 0.88852,
+  20% 0.9408,
+  25% 0.35088,
+  30% 0.22426,
+  35% 0.26418,
+  40% 0.09249,
+  45% 0.35312,
+  50% 0.89436,
+  55% 0.9574,
+  60% 0.19754,
+  65% 0.05086,
+  70% 0.12137,
+  75% 0.75791,
+  80% 0.89617,
+  85% 0.90183,
+  90% 0.20657,
+  95% 0.64125,
+  100% 0.78042,
+);
+
+@keyframes flicker {
+
+  @each $p,
+  $opacity in $opacities {
+    #{$p} {
+      opacity: $opacity;
+    }
+  }
+}
+
+/* ANIMATE UNIQUE SCANLINE */
+@keyframes scanline {
+  0% {
+    top: 99%;
+  }
+}
+
+$mbr-blue: rgba(0, 30, 255, 0.5);
+$mbr-red: rgba(255, 0, 80, 0.3);
+$offsets: (
+  0% 0.4389924193300864px,
+  5% 2.7928974010788217px,
+  10% 0.02956275843481219px,
+  15% 0.40218538552878136px,
+  20% 3.4794037899852017px,
+  25% 1.6125630401149584px,
+  30% 0.7015590085143956px,
+  35% 3.896914047650351px,
+  40% 3.870905614848819px,
+  45% 2.231056963361899px,
+  50% 0.08084290417898504px,
+  55% 2.3758461067427543px,
+  60% 2.202193051050636px,
+  65% 2.8638780614874975px,
+  70% 0.48874025155497314px,
+  75% 1.8948491305757957px,
+  80% 0.0833037308038857px,
+  85% 0.09769827255241735px,
+  90% 3.443339761481782px,
+  95% 2.1841838852799786px,
+  100% 2.6208764473832513px,
+);
+
+@keyframes textShadow {
+
+  @each $p,
+  $offset in $offsets {
+    #{$p} {
+      text-shadow: #{$offset} 0 1px rgba(0, 30, 255, 0.5),
+      -#{$offset} 0 1px rgba(255, 0, 80, 0.3),
+      0 0 3px;
+    }
+  }
+}

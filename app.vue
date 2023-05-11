@@ -8,5 +8,6 @@
         <NuxtPage />
       </div>
     </main>
+    <PageFooter />
   </div>
 </template>

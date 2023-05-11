@@ -2,10 +2,9 @@
 const { entrances } = useData();
 const theme = computed(() => useColorMode().preference);
 const setTheme = (theme: string) => useColorMode().preference = theme;
-
 </script>
 <template>
-  <header class="navbar navbar-expand-lg px-3 sticky-top bg-body-tertiary">
+  <header class="navbar navbar-expand-lg px-3 sticky-top bg-body-secondary">
     <nav class="container">
       <NuxtLink class="navbar-brand mx-auto" to="/">
         ЖК Основа
@@ -19,6 +18,11 @@ const setTheme = (theme: string) => useColorMode().preference = theme;
           <li v-for="E in entrances" :key="E.ID" class="nav-item">
             <NuxtLink class="nav-link" :to="`/entrance/${E.ID}/`">
               Подъезд №{{ E.ID }}
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" to="/parking/">
+              Паркинг
             </NuxtLink>
           </li>
         </ul>

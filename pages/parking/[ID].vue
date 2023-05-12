@@ -15,9 +15,7 @@ const img = `/parking/${P.ID}.svg`;
         ~ {{ P.title }}
       </div>
       <div class="card-body">
-        <a :href="img" target="_blank">
-          <img class="img-thumbnail w-100 bg-body-secondary" :src="img">
-        </a>
+        <CommonImage :src="img" />
       </div>
     </div>
   </div>

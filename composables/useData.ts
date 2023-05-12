@@ -1,7 +1,12 @@
-import data from "../data/data.json" assert { type: "json" };
+import data from "../content/data.json" assert { type: "json" };
+
+// 4 и 5 перепутаны
+data[2].turnId = "5";
+data[4].turnId = "4";
+// Лишняя квартира???
+data[4].floors[5].flats.pop();
 
 const turns = data.sort((a, b) => a.turnId > b.turnId ? 1 : -1);
-
 const entrances: Entrance[] = [];
 
 let index = 1;
@@ -23,11 +28,11 @@ for (const turn of turns) {
     ID: turn.turnId,
     title: turn.turnTitle,
     flatCount: turn.flatCount,
-    floors
+    floors: floors.reverse()
   });
 }
 
-const parkings = [
+const parkings: Parking[] = [
   {
     ID: "1-1",
     title: "Этаж -1"
@@ -73,4 +78,10 @@ interface Floor {
   flatCount: number
   flatFirst: number
   flatLast: number
+}
+
+interface Parking {
+  ID: string
+  title: string
+  note?: string
 }

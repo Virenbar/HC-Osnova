@@ -1,5 +1,4 @@
 <script setup lang="ts">
-const { entrances } = useData();
 const theme = computed(() => useColorMode().preference);
 const setTheme = (theme: string) => useColorMode().preference = theme;
 </script>
@@ -15,9 +14,9 @@ const setTheme = (theme: string) => useColorMode().preference = theme;
 
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="navbar-nav me-auto">
-          <li v-for="E in entrances" :key="E.ID" class="nav-item">
-            <NuxtLink class="nav-link" :to="`/entrance/${E.ID}/`">
-              Подъезд №{{ E.ID }}
+          <li class="nav-item">
+            <NuxtLink class="nav-link" :to="`/entrance/`">
+              Подъезды
             </NuxtLink>
           </li>
           <li class="nav-item">

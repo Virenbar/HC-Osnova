@@ -9,7 +9,7 @@ const img = `/turns/${E.title}/${F.title}.svg`;
 <template>
   <div class="card">
     <div class="card-header">
-      <NuxtLink to="../../">
+      <NuxtLink to="../">
         Подъезд №{{ entrance }}
       </NuxtLink>
       - Этаж №{{ floor }} (Квартир: {{ F.flatCount }})

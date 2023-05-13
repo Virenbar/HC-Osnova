@@ -10,7 +10,7 @@
 
     <div class="d-none d-md-block">
       This
-      <a href="https://github.com/Virenbar/osnova" target="_blank">website</a>
+      <a href="https://github.com/Virenbar/HC-Osnova" target="_blank">website</a>
       made using
       <a href="https://nuxt.com/" target="_blank">
         <i class="fa-solid fa-mountain" />

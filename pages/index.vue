@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { entrances } = useData();
+
 </script>
 <template>
   <div class="card mx-auto" style="max-width: 40rem;">

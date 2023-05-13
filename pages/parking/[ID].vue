@@ -2,7 +2,7 @@
 const { params } = useRoute();
 const parking = params.ID as string;
 const P = useData().getParking(parking);
-const img = `/parking/${P.ID}.svg`;
+const img = `/svg/parking/${P.ID}.svg`;
 </script>
 <template>
   <div>

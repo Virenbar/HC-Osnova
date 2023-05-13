@@ -4,7 +4,7 @@
   "description": "ЖК Основа",
   "author": "Virenbar",
   "license": "MIT",
-  "repository": "Virenbar/osnova",
+  "repository": "Virenbar/HC-Osnova",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

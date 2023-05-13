@@ -6,7 +6,7 @@ useSeoMeta({
   ogSiteName: "ЖК Основа",
   ogType: "website",
   description: "Сайт ЖК Основа",
-  ogUrl: computed(() => useRoute().path)
+  ogUrl: computed(() => useRuntimeConfig().app.baseURL + useRoute().path.slice(1))
 });
 </script>
 <template>

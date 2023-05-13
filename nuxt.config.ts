@@ -3,6 +3,7 @@ export default defineNuxtConfig({
     "@/assets/css/styles.scss"
   ],
   app: {
+    baseURL: "/HC-Osnova/",
     head: {
       meta: [
         { property: "og:type", content: "website" },
@@ -22,9 +23,6 @@ export default defineNuxtConfig({
     "@artmizu/yandex-metrika-nuxt"
   ],
   content: {
-    documentDriven: {
-      page: false
-    },
     markdown: {
       anchorLinks: false
     }
@@ -36,6 +34,6 @@ export default defineNuxtConfig({
     id: "87731504"
   },
   sitemap: {
-    hostname: "https://example.com"
+    hostname: "https://virenbar.github.io"
   }
 });

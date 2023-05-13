@@ -1,15 +1,4 @@
 {
-    "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
-    "compilerOptions": {
-        "outDir": "build",
-        "sourceMap": true,
-        "resolveJsonModule": true,
-        "declaration": true,
-        "noUncheckedIndexedAccess": false,
-        "moduleResolution": "NodeNext",
-        "module": "NodeNext",
-    },
-    "include": [
-        "src/**/*"
-    ]
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json"
 }

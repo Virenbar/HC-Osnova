@@ -1,23 +1,25 @@
-<script setup lang="ts">
-const { entrances } = useData();
-
-</script>
 <template>
   <div class="card mx-auto" style="max-width: 40rem;">
     <div class="card-body">
-      <ul>
-        <li v-for="E in entrances" :key="E.ID">
-          <NuxtLink :to="`/entrance/${E.ID}/`">
-            Подъезд №{{ E.ID }}
-          </NuxtLink>
-        </li>
-      </ul>
+      <EntranceList class="w-50 mx-auto" />
 
-      <p class=" d-flex justify-content-center">
-        <a href="https://t.me/ochoba_5" target="_blank">
-          <img class="img-thumbnail bg-white" src="/image/telegram.jpg">
-        </a>
-      </p>
+      <div class="text-center">
+        <div class="text-white">
+          Чат жителей ЖК Основа
+          <br>
+          <a href="https://t.me/ochoba_5" target="_blank">
+            <img class="w-50" src="/image/telegram.webp">
+          </a>
+          <br>
+          <a href="https://t.me/ochoba_5" target="_blank">
+            <span class="h1">@OCHOBA_5</span>
+          </a>
+        </div>
+        <br>
+        <div class="text-white">
+          На темной теме QR код не считается
+        </div>
+      </div>
     </div>
   </div>
 </template>

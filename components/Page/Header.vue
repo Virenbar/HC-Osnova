@@ -1,4 +1,5 @@
 <script setup lang="ts">
+useFocusReset();
 const theme = computed(() => useColorMode().preference);
 const setTheme = (theme: string) => useColorMode().preference = theme;
 </script>

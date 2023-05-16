@@ -12,6 +12,7 @@ const entrances: Entrance[] = [];
 let index = 1;
 for (const turn of turns) {
   const floors: Floor[] = [];
+  const first = index;
   for (const floor of turn.floors.reverse()) {
     const first = index;
     index += floor.flats.length;
@@ -24,10 +25,13 @@ for (const turn of turns) {
       flatLast: last
     });
   }
+  const last = index - 1;
   entrances.push({
     ID: turn.turnId,
     title: turn.turnTitle,
     flatCount: turn.flatCount,
+    flatFirst: first,
+    flatLast: last,
     floors: floors.reverse()
   });
 }
@@ -69,6 +73,8 @@ interface Entrance {
   ID: string
   title: string
   flatCount: number
+  flatFirst: number
+  flatLast: number
   floors: Floor[]
 }
 

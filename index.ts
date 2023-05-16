@@ -1,6 +1,6 @@
 import fs from "node:fs";
 import { fetch } from "undici";
-import data from "./data.json" assert { type: "json" };
+import data from "./content/data.json" assert { type: "json" };
 
 for (const turn of data) {
     const turn_dir = `turns/${turn.turnTitle}`;

@@ -7,9 +7,9 @@ const { parkings } = useData();
       <b>Паркинг</b>
     </div>
     <div class="card-body">
-      <ul>
-        <li v-for="P in parkings" :key="P.ID">
-          <NuxtLink :to="`./${P.ID}/`">
+      <ul class="list-group w-25">
+        <li v-for="P in parkings" :key="P.ID" class="list-group-item">
+          <NuxtLink :to="`./${P.ID}/`" class="d-flex justify-content-between align-items-center">
             {{ P.title }}
           </NuxtLink>
         </li>

@@ -1,6 +1,3 @@
-<script setup lang="ts">
-const { entrances } = useData();
-</script>
 <template>
   <div class="card">
     <Title>Подъезды</Title>
@@ -8,13 +5,7 @@ const { entrances } = useData();
       <b>Подъезды</b>
     </div>
     <div class="card-body">
-      <ul>
-        <li v-for="E in entrances" :key="E.ID">
-          <NuxtLink :to="`/entrance/${E.ID}/`">
-            Подъезд №{{ E.ID }}
-          </NuxtLink>
-        </li>
-      </ul>
+      <EntranceList class="w-25" />
     </div>
   </div>
 </template>

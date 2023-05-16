@@ -10,10 +10,11 @@ const E = useData().getEntrance(entrance);
         Подъезд №{{ entrance }} (Квартир: {{ E.flatCount }})
       </div>
       <div class="card-body">
-        <ul>
-          <li v-for="F in E.floors" :key="F.title">
-            <NuxtLink :to="`./floor-${F.title}/`">
-              Этаж №{{ F.title }}: {{ F.flatFirst }} - {{ F.flatLast }}
+        <ul class="list-group">
+          <li v-for="F in E.floors" :key="F.title" class="list-group-item">
+            <NuxtLink :to="`./floor-${F.title}/`" class="d-flex justify-content-between align-items-center">
+              Этаж №{{ F.title }}
+              <span class="badge bg-primary rounded-pill">{{ F.flatFirst }} - {{ F.flatLast }}</span>
             </NuxtLink>
           </li>
         </ul>
@@ -21,3 +22,10 @@ const E = useData().getEntrance(entrance);
     </div>
   </div>
 </template>
+<style scoped>
+ul {
+  max-width: 15rem;
+  --bs-list-group-item-padding-x: 5px;
+  --bs-list-group-item-padding-y: 5px;
+}
+</style>

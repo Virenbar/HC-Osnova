@@ -11,3 +11,8 @@ const { entrances } = useData();
     </li>
   </ul>
 </template>
+<style scoped>
+ul {
+  max-width: 20rem;
+}
+</style>

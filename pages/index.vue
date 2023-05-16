@@ -1,14 +1,16 @@
 <template>
   <div class="card mx-auto" style="max-width: 40rem;">
     <div class="card-body">
-      <EntranceList class="w-50 mx-auto" />
+      <EntranceList class="mx-auto" />
 
       <div class="text-center">
-        <div class="text-white">
-          Чат жителей ЖК Основа
+        <div>
+          <div class="h4">
+            Чат жителей ЖК Основа
+          </div>
           <br>
           <a href="https://t.me/ochoba_5" target="_blank">
-            <img class="w-50" src="/image/telegram.webp">
+            <img src="/image/telegram.webp">
           </a>
           <br>
           <a href="https://t.me/ochoba_5" target="_blank">
@@ -23,3 +25,8 @@
     </div>
   </div>
 </template>
+<style scoped>
+img {
+  max-width: 20rem;
+}
+</style>

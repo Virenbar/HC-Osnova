@@ -5,7 +5,7 @@
       <b>Подъезды</b>
     </div>
     <div class="card-body">
-      <EntranceList class="w-25" />
+      <EntranceList />
     </div>
   </div>
 </template>

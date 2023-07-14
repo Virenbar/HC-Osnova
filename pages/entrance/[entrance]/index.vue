@@ -6,6 +6,7 @@ const E = useData().getEntrance(entrance);
 <template>
   <div>
     <div class="card">
+      <Title>Подъезд №{{ entrance }}</Title>
       <div class="card-header">
         Подъезд №{{ entrance }} (Квартир: {{ E.flatCount }})
       </div>

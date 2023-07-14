@@ -9,7 +9,9 @@ const setTheme = (theme: string) => useColorMode().preference = theme;
       <NuxtLink class="navbar-brand mx-auto" to="/">
         ЖК Основа
       </NuxtLink>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon" />
       </button>
 
@@ -23,6 +25,11 @@ const setTheme = (theme: string) => useColorMode().preference = theme;
           <li class="nav-item">
             <NuxtLink class="nav-link" to="/parking/">
               Паркинг
+            </NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink class="nav-link" to="/document/">
+              Документы
             </NuxtLink>
           </li>
         </ul>

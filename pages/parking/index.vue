@@ -3,6 +3,7 @@ const { parkings } = useData();
 </script>
 <template>
   <div class="card">
+    <Title>Паркинг</Title>
     <div class="card-header">
       <b>Паркинг</b>
     </div>

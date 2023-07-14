@@ -3,7 +3,8 @@ import data from "../content/data.json" assert { type: "json" };
 // 4 и 5 перепутаны
 data[2].turnId = "5";
 data[4].turnId = "4";
-// Лишняя квартира???
+// Лишняя квартира??? 
+// На этаже есть квартира 451а  
 data[4].floors[5].flats.pop();
 
 const turns = data.sort((a, b) => a.turnId > b.turnId ? 1 : -1);
@@ -55,6 +56,10 @@ const parkings: Parking[] = [
   }
 ];
 
+const documents: Document[] = [
+  { title: "Инструкция ЖК Основа", path: "/pdf/Instruction.pdf" }
+];
+
 const getEntrance = (ID: string) => entrances.filter(T => T.ID == ID)[0];
 const getFloor = (entrance: string, floor: string) => getEntrance(entrance).floors.filter(F => F.title == floor)[0];
 const getParking = (ID: string) => parkings.filter(T => T.ID == ID)[0];
@@ -63,11 +68,15 @@ export default function () {
   return {
     entrances,
     parkings,
+    documents,
     getEntrance,
     getFloor,
-    getParking
+    getParking,
+
   };
 }
+
+//#region Interfaces
 
 interface Entrance {
   ID: string
@@ -91,3 +100,9 @@ interface Parking {
   title: string
   note?: string
 }
+
+interface Document {
+  title: string
+  path: string
+}
+//#endregion

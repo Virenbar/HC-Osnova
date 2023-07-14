@@ -8,6 +8,7 @@ const img = `/svg/turns/${E.title}/${F.title}.svg`;
 </script>
 <template>
   <div class="card">
+    <Title>Подъезд №{{ entrance }} - Этаж №{{ floor }}</Title>
     <div class="card-header">
       <NuxtLink to="../">
         Подъезд №{{ entrance }}

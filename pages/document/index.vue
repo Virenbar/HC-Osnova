@@ -15,7 +15,7 @@ const { documents, project } = useData();
           </a>
         </li>
       </ul>
-      <CommonDocument :node="project" />
+      <CommonTreeNode :node="project" />
     </div>
   </div>
 </template>

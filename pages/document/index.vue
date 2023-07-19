@@ -1,5 +1,5 @@
 <script setup>
-const { documents } = useData();
+const { documents, project } = useData();
 </script>
 <template>
   <div class="card">
@@ -8,18 +8,15 @@ const { documents } = useData();
       <b>Документы</b>
     </div>
     <div class="card-body">
-      <ul class="list-group">
-        <li v-for="D in documents" :key="D.ID" class="list-group-item">
-          <a :href="D.path" target="_blank" class="d-flex justify-content-between align-items-center">
+      <ul>
+        <li v-for="D in documents" :key="D.title">
+          <a :href="D.path" target="_blank">
             {{ D.title }}
           </a>
         </li>
       </ul>
+      <CommonDocument :node="project" />
     </div>
   </div>
 </template>
-<style scoped>
-ul {
-  max-width: 20rem;
-}
-</style>
+

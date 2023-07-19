@@ -1,4 +1,6 @@
 import data from "../content/data.json" assert { type: "json" };
+import projectRAW from "../content/project.json" assert { type: "json" };
+import type { TreeNode } from "../types";
 
 // 4 и 5 перепутаны
 data[2].turnId = "5";
@@ -38,26 +40,16 @@ for (const turn of turns) {
 }
 
 const parkings: Parking[] = [
-  {
-    ID: "1-1",
-    title: "Этаж -1"
-  }, {
-    ID: "1-2",
-    title: "Этаж -2"
-  }, {
-    ID: "1.2-1",
-    title: "Секция 1.2 - Этаж -1"
-  }, {
-    ID: "1.2-2",
-    title: "Секция 1.2 - Этаж -2"
-  }, {
-    ID: "1.3-2",
-    title: "Секция 1.3 - Этаж -2"
-  }
+  { title: "Этаж -1", ID: "1-1" },
+  { title: "Этаж -2", ID: "1-2" },
+  { title: "Секция 1.2 - Этаж -1", ID: "1.2-1" },
+  { title: "Секция 1.2 - Этаж -2", ID: "1.2-2" },
+  { title: "Секция 1.3 - Этаж -2", ID: "1.3-2" }
 ];
-
+const project: TreeNode = projectRAW;
 const documents: Document[] = [
-  { title: "Инструкция ЖК Основа", path: "/pdf/Instruction.pdf" }
+  { title: "Инструкция ЖК Основа", path: "/pdf/Instruction.pdf" },
+  { title: "Схема земельного участка", path: "/pdf/Plan.pdf" },
 ];
 
 const getEntrance = (ID: string) => entrances.filter(T => T.ID == ID)[0];
@@ -68,6 +60,7 @@ export default function () {
   return {
     entrances,
     parkings,
+    project,
     documents,
     getEntrance,
     getFloor,
@@ -101,7 +94,7 @@ interface Parking {
   note?: string
 }
 
-interface Document {
+export interface Document {
   title: string
   path: string
 }

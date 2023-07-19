@@ -10,7 +10,7 @@ const { parkings } = useData();
     <div class="card-body">
       <ul class="list-group">
         <li v-for="P in parkings" :key="P.ID" class="list-group-item">
-          <NuxtLink :to="`./${P.ID}/`" class="d-flex justify-content-between align-items-center">
+          <NuxtLink :to="`/parking/${P.ID}/`" class="d-flex justify-content-between align-items-center">
             {{ P.title }}
           </NuxtLink>
         </li>

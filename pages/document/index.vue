@@ -10,7 +10,7 @@ const { documents, project } = useData();
     <div class="card-body">
       <ul>
         <li v-for="D in documents" :key="D.title">
-          <a :href="D.path" target="_blank">
+          <a :href="useBaseURL(D.path)" target="_blank">
             {{ D.title }}
           </a>
         </li>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<Props>();
-const src = computed(() => props.src.startsWith("/") ? `${useRuntimeConfig().app.baseURL}${props.src.slice(1)}` : props.src);
+const src = computed(() => useBaseURL(props.src));
 
 interface Props { src: string }
 </script>

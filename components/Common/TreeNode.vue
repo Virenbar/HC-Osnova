@@ -4,17 +4,17 @@ import { TreeNode } from "types";
 const props = defineProps<Props>();
 interface Props { node: TreeNode }
 
-const node = computed(() => props.node);
+const href = computed(() => useBaseURL(props.node.path));
 </script>
 <template>
   <ul>
     <li>
-      <a v-if="node.path" :href="node.path" target="_blank"> {{ node.title }} </a>
+      <a v-if="href" :href="href" target="_blank"> {{ props.node.title }} </a>
       <template v-else>
-        {{ node.title }}
+        {{ props.node.title }}
       </template>
     </li>
-    <li v-for="N in node.child" :key="N.title">
+    <li v-for="N in props.node.child" :key="N.title">
       <CommonTreeNode :node="N" />
     </li>
   </ul>

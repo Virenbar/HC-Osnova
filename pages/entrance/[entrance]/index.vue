@@ -13,7 +13,7 @@ const E = useData().getEntrance(entrance);
       <div class="card-body">
         <ul class="list-group">
           <li v-for="F in E.floors" :key="F.title" class="list-group-item">
-            <NuxtLink :to="`./floor-${F.title}/`" class="d-flex justify-content-between align-items-center">
+            <NuxtLink :to="`/entrance/${entrance}/floor-${F.title}/`" class="d-flex justify-content-between align-items-center">
               Этаж №{{ F.title }}
               <span class="badge bg-primary rounded-pill">{{ F.flatFirst }} - {{ F.flatLast }}</span>
             </NuxtLink>

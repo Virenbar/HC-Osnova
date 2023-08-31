@@ -15,10 +15,10 @@
     "@jridgewell/gen-mapping" "^0.3.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@artmizu/yandex-metrika-nuxt@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@artmizu/yandex-metrika-nuxt/-/yandex-metrika-nuxt-1.0.2.tgz#4bdbc338fea70f8e93bf5722b9543efb5c9a0b5f"
-  integrity sha512-RY7Ye+1it39NCyXRd8dck7PV4KlWJ46jlW6yCcwNKJdd/b1YchFpDQGBS0ONz5y72xadPZ3bLTF7Sqk8mt3+8A==
+"@artmizu/yandex-metrika-nuxt@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@artmizu/yandex-metrika-nuxt/-/yandex-metrika-nuxt-1.0.3.tgz#465f9260ea5e0af930a037a9ade20fbfc3f1e30f"
+  integrity sha512-BdXGZnl3WVuBkI04VWBkFxtGr0wRpI0IM3g78lc37rs935w5XC05XhPSp/GV3uzVqeWrHU1Hrty4kIXlBOFEDw==
   dependencies:
     "@nuxt/kit" "^3.3.1"
     consola "^2.15.3"

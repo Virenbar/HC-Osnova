@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { TreeNode } from "types";
+import { TreeNode } from "../../types";
 
 const props = defineProps<Props>();
 interface Props { node: TreeNode }

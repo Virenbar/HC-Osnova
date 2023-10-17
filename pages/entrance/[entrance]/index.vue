@@ -8,7 +8,9 @@ const E = useData().getEntrance(entrance);
     <div class="card">
       <Title>Подъезд №{{ entrance }}</Title>
       <div class="card-header">
-        Подъезд №{{ entrance }} (Квартир: {{ E.flatCount }})
+        <b>
+          Подъезд №{{ entrance }} (Квартир: {{ E.flatCount }})
+        </b>
       </div>
       <div class="card-body">
         <ul class="list-group">

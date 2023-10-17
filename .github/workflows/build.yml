@@ -17,11 +17,16 @@ jobs:
         with:
           lfs: true
 
-      - name: Use Node.js 18.x
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: "yarn"
+
+      - name: Set variables
+        run: |
+          echo "NUXT_PUBLIC_BRANCH=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> "$GITHUB_ENV"
+          echo "NUXT_PUBLIC_HASH=${GITHUB_SHA}" >> "$GITHUB_ENV"
 
       - name: Build website
         run: |

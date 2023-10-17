@@ -1,21 +1,24 @@
+<script setup lang="ts">
+const config = useRuntimeConfig();
+let tree = `${config.public.repository}/tree/${config.public.hash}`;
+tree = tree.replace("unknown", config.public.branch);
+</script>
 <template>
-  <footer class="container-fluid py-1 px-3 bg-body-secondary d-flex justify-content-between align-items-center">
+  <footer class="container-fluid py-1 px-3 bg-body-secondary d-flex justify-content-between">
     <div class="d-none d-md-block">
-      Hosted on
+      Made with
+      <a href="https://nuxt.com/" target="_blank">
+        <i class="fa-solid fa-mountain" /> Nuxt
+      </a>
+      and
       <a href="https://pages.github.com/" target="_blank">
-        <i class="fa-brands fa-github" />
-        GitHub Pages
+        <i class="fa-brands fa-github" /> GitHub Pages
       </a>
     </div>
-
-    <div class="d-none d-md-block">
-      This
-      <a href="https://github.com/Virenbar/HC-Osnova" target="_blank">website</a>
-      made using
-      <a href="https://nuxt.com/" target="_blank">
-        <i class="fa-solid fa-mountain" />
-        Nuxt
-      </a>
+    <div>
+      Version: <a :href="tree" class="text-link" target="_blank">
+        {{ config.public.branch }}@{{ config.public.hash.substring(0, 7) }}
+      </a>#{{ formatDate(new Date(config.public.date)) }}
     </div>
   </footer>
 </template>

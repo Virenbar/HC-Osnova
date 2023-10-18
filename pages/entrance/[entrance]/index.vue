@@ -4,7 +4,7 @@ const entrance = params.entrance as string;
 const E = useData().getEntrance(entrance);
 </script>
 <template>
-  <div>
+  <div class="container py-3">
     <div class="card">
       <Title>Подъезд №{{ entrance }}</Title>
       <div class="card-header">

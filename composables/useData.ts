@@ -17,15 +17,25 @@ for (const turn of turns) {
   const floors: Floor[] = [];
   const first = index;
   for (const floor of turn.floors.reverse()) {
+    const flats: Flat[] = [];
     const first = index;
-    index += floor.flats.length;
+    //index += floor.flats.length;
+    for (const flat of floor.flats) {
+      flats.push({
+        ID: flat.number,
+        title: `${index++}`,
+        area: flat.area,
+        room: flat.room
+      });
+    }
     const last = index - 1;
     floors.push({
       ID: floor.id,
       title: floor.title,
       flatCount: floor.flats.length,
       flatFirst: first,
-      flatLast: last
+      flatLast: last,
+      flats: flats
     });
   }
   const last = index - 1;
@@ -54,6 +64,7 @@ const documents: Document[] = [
 
 const getEntrance = (ID: string) => entrances.filter(T => T.ID == ID)[0];
 const getFloor = (entrance: string, floor: string) => getEntrance(entrance).floors.filter(F => F.title == floor)[0];
+const getFlat = (entrance: string, floor: string, flat: string) => getEntrance(entrance).floors.filter(F => F.title == floor)[0].flats.filter(F => F.title == flat)[0];
 const getParking = (ID: string) => parkings.filter(T => T.ID == ID)[0];
 
 export default function () {
@@ -64,8 +75,8 @@ export default function () {
     documents,
     getEntrance,
     getFloor,
+    getFlat,
     getParking,
-
   };
 }
 
@@ -86,6 +97,14 @@ interface Floor {
   flatCount: number
   flatFirst: number
   flatLast: number
+  flats: Flat[]
+}
+
+interface Flat {
+  ID: string
+  title: string
+  area: string
+  room: string
 }
 
 interface Parking {

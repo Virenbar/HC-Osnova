@@ -5,7 +5,7 @@ const P = useData().getParking(parking);
 const img = `/svg/parking/${P.ID}.svg`;
 </script>
 <template>
-  <div>
+  <div class="container py-3">
     <Title>Паркинг - {{ P.title }}</Title>
     <div class="card">
       <div class="card-header">

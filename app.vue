@@ -15,9 +15,7 @@ useSeoMeta({
   <div class="min-vh-100 d-flex flex-column">
     <PageHeader />
     <main id="main" class="flex-grow-1 flex-shrink-0">
-      <div class="container py-3">
-        <NuxtPage />
-      </div>
+      <NuxtPage />
     </main>
     <PageFooter />
   </div>

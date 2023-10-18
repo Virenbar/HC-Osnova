@@ -2,19 +2,21 @@
 const { parkings } = useData();
 </script>
 <template>
-  <div class="card">
-    <Title>Паркинг</Title>
-    <div class="card-header">
-      <b>Паркинг</b>
-    </div>
-    <div class="card-body">
-      <ul class="list-group">
-        <li v-for="P in parkings" :key="P.ID" class="list-group-item">
-          <NuxtLink :to="`/parking/${P.ID}/`" class="d-flex justify-content-between align-items-center">
-            {{ P.title }}
-          </NuxtLink>
-        </li>
-      </ul>
+  <div class="container py-3">
+    <div class="card">
+      <Title>Паркинг</Title>
+      <div class="card-header">
+        <b>Паркинг</b>
+      </div>
+      <div class="card-body">
+        <ul class="list-group">
+          <li v-for="P in parkings" :key="P.ID" class="list-group-item">
+            <NuxtLink :to="`/parking/${P.ID}/`" class="d-flex justify-content-between align-items-center">
+              {{ P.title }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>

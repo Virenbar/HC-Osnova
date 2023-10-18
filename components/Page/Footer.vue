@@ -1,11 +1,18 @@
 <script setup lang="ts">
 const config = useRuntimeConfig();
-let tree = `${config.public.repository}/tree/${config.public.hash}`;
-tree = tree.replace("unknown", config.public.branch);
+const repository = config.public.repository;
+
+const branch = config.public.branch;
+const branchURL = `${repository}/tree/${branch}`;
+
+const tree = config.public.hash.substring(0, 7);
+const treeURL = `${repository}/tree/${config.public.hash}`;
+
+const date = formatDate(new Date(config.public.date)).replaceAll(".", "");
 </script>
 <template>
   <footer class="container-fluid py-1 px-3 bg-body-secondary d-flex justify-content-between">
-    <div class="d-none d-md-block">
+    <div>
       Made with
       <a href="https://nuxt.com/" target="_blank">
         <i class="fa-solid fa-mountain" /> Nuxt
@@ -15,10 +22,14 @@ tree = tree.replace("unknown", config.public.branch);
         <i class="fa-brands fa-github" /> GitHub Pages
       </a>
     </div>
-    <div>
-      Version: <a :href="tree" class="text-link" target="_blank">
-        {{ config.public.branch }}@{{ config.public.hash.substring(0, 7) }}
-      </a>#{{ formatDate(new Date(config.public.date)) }}
+
+    <div class="d-none d-md-block">
+      Version:
+      <a :href="branchURL" target="_blank">
+        {{ config.public.branch }}
+      </a>
+      <span v-if="tree != 'unknown'">@<a :href="treeURL" target="_blank"> {{ tree }} </a></span>
+      <span>#{{ date }}</span>
     </div>
   </footer>
 </template>

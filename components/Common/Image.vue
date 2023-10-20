@@ -5,7 +5,9 @@ interface Props { src: string }
 </script>
 <template>
   <NuxtLink :to="useBaseURL(props.src)" target="_blank">
-    <NuxtImg class="img-thumbnail w-100" :src="props.src" />
+    <img class="img-thumbnail w-100" :src="useBaseURL(props.src)">
+    <!-- Broken on Netlify -->
+    <!-- <NuxtImg class="img-thumbnail w-100" :src="props.src" /> -->
   </NuxtLink>
 </template>
 <style scoped>

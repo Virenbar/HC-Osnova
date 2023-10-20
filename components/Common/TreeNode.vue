@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { TreeNode } from "../../types";
+import type { TreeNode } from "../../types";
 
 const props = defineProps<Props>();
 interface Props { node: TreeNode }
 
-const href = computed(() => useBaseURL(props.node.path));
+const url = computed(() => useBaseURL(props.node.path));
 </script>
 <template>
   <ul>
     <li>
-      <a v-if="href" :href="href" target="_blank"> {{ props.node.title }} </a>
+      <NuxtLink v-if="url" :to="url" target="_blank">
+        {{ props.node.title }}
+      </NuxtLink>
       <template v-else>
         {{ props.node.title }}
       </template>

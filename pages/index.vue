@@ -22,20 +22,20 @@ const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
           Дом на ДОМ.РФ
         </div>
         <div class="btn-group">
-          <a class="btn btn-primary" :href="`${house}/40746`">
+          <NuxtLink class="btn btn-primary" :to="`${house}/40746`" target="_blank">
             Дом 1.1
-          </a>
-          <a class="btn btn-primary" :href="`${house}/40747`">
+          </NuxtLink>
+          <NuxtLink class="btn btn-primary" :to="`${house}/40747`" target="_blank">
             Дом 1.2
-          </a>
-          <a class="btn btn-primary" :href="`${house}/40748`">
+          </NuxtLink>
+          <NuxtLink class="btn btn-primary" :to="`${house}/40748`" target="_blank">
             Дом 1.3
-          </a>
+          </NuxtLink>
         </div>
         <div class="m-1">
-          <a class="btn btn-primary" :href="`https://dom.gosuslugi.ru/#!/house-view?guid=${guid}&typeCode=1`">
+          <NuxtLink class="btn btn-primary" :to="`https://dom.gosuslugi.ru/#!/house-view?guid=${guid}&typeCode=1`" target="_blank">
             ГИС ЖКХ
-          </a>
+          </NuxtLink>
         </div>
       </div>
     </div>

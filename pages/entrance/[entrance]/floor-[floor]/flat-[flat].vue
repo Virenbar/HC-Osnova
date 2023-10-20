@@ -13,12 +13,14 @@ const img = `/svg/turns/${E.title}/flats/${F.title}/${FL.ID}.svg`;
     <div class="card">
       <Title>Подъезд №{{ entrance }} - Этаж №{{ floor }} - Квартира №{{ flat }}</Title>
       <div class="card-header">
-        <NuxtLink to="../../">
-          Подъезд №{{ entrance }}
-        </NuxtLink> -
-        <NuxtLink to="../">
-          Этаж №{{ floor }}
-        </NuxtLink> - Квартира №{{ flat }}
+        <b>
+          <NuxtLink to="../../">
+            Подъезд №{{ entrance }}
+          </NuxtLink> -
+          <NuxtLink to="../">
+            Этаж №{{ floor }}
+          </NuxtLink> - Квартира №{{ flat }}
+        </b>
       </div>
       <div class="card-body">
         <ul>

@@ -7,18 +7,20 @@ const F = useData().getFloor(entrance, floor);
 const img = `/svg/turns/${E.title}/${F.title}.svg`;
 </script>
 <template>
-  <div class="container py-3 text-center">
+  <div class="container py-3">
     <div class="card">
       <Title>Подъезд №{{ entrance }} - Этаж №{{ floor }}</Title>
       <div class="card-header">
-        <NuxtLink to="../">
-          Подъезд №{{ entrance }}
-        </NuxtLink>
-        - Этаж №{{ floor }} (Квартир: {{ F.flatCount }})
+        <b>
+          <NuxtLink to="../">
+            Подъезд №{{ entrance }}
+          </NuxtLink>
+          - Этаж №{{ floor }}
+        </b>
       </div>
       <div class="card-body">
-        <div>
-          Квартиры
+        <div class="text-center">
+          Квартир: {{ F.flatCount }}
         </div>
         <div class="d-flex justify-content-center flex-wrap">
           <template v-for="flat in F.flats" :key="flat.ID">

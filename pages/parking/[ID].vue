@@ -9,10 +9,12 @@ const img = `/svg/parking/${P.ID}.svg`;
     <Title>Паркинг - {{ P.title }}</Title>
     <div class="card">
       <div class="card-header">
-        <NuxtLink to="../">
-          Паркинг
-        </NuxtLink>
-        - {{ P.title }}
+        <b>
+          <NuxtLink to="../">
+            Паркинг
+          </NuxtLink>
+          - {{ P.title }}
+        </b>
       </div>
       <div class="card-body">
         <CommonImage :src="img" />

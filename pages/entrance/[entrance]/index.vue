@@ -9,10 +9,13 @@ const E = useData().getEntrance(entrance);
       <Title>Подъезд №{{ entrance }}</Title>
       <div class="card-header">
         <b>
-          Подъезд №{{ entrance }} (Квартир: {{ E.flatCount }})
+          Подъезд №{{ entrance }}
         </b>
       </div>
       <div class="card-body">
+        <div>
+          Квартир: {{ E.flatCount }}
+        </div>
         <ul class="list-group">
           <li v-for="F in E.floors" :key="F.title" class="list-group-item">
             <NuxtLink :to="`/entrance/${entrance}/floor-${F.title}/`" class="d-flex justify-content-between align-items-center">

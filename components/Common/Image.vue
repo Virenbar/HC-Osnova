@@ -1,12 +1,11 @@
 <script setup lang="ts">
 const props = defineProps<Props>();
-const src = computed(() => useBaseURL(props.src));
 
 interface Props { src: string }
 </script>
 <template>
-  <NuxtLink :to="src" target="_blank">
-    <NuxtImg class="img-thumbnail w-100" :src="src" />
+  <NuxtLink :to="useBaseURL(props.src)" target="_blank">
+    <NuxtImg class="img-thumbnail w-100" :src="props.src" />
   </NuxtLink>
 </template>
 <style scoped>

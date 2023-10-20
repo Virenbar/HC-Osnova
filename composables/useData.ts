@@ -25,7 +25,8 @@ for (const turn of turns) {
         ID: flat.number,
         title: `${index++}`,
         area: flat.area,
-        room: flat.room
+        room: flat.room,
+        image: `/svg/turns/${turn.turnTitle}/flats/${floor.title}/${flat.number}.svg`
       });
     }
     const last = index - 1;
@@ -35,7 +36,8 @@ for (const turn of turns) {
       flatCount: floor.flats.length,
       flatFirst: first,
       flatLast: last,
-      flats: flats
+      flats: flats,
+      image: `/svg/turns/${turn.turnTitle}/${floor.title}.svg`
     });
   }
   const last = index - 1;
@@ -64,7 +66,7 @@ const documents: Document[] = [
 
 const getEntrance = (ID: string) => entrances.filter(T => T.ID == ID)[0];
 const getFloor = (entrance: string, floor: string) => getEntrance(entrance).floors.filter(F => F.title == floor)[0];
-const getFlat = (entrance: string, floor: string, flat: string) => getEntrance(entrance).floors.filter(F => F.title == floor)[0].flats.filter(F => F.title == flat)[0];
+const getFlat = (entrance: string, floor: string, flat: string) => getFloor(entrance, floor).flats.filter(F => F.title == flat)[0];
 const getParking = (ID: string) => parkings.filter(T => T.ID == ID)[0];
 
 export default function () {
@@ -98,6 +100,7 @@ interface Floor {
   flatFirst: number
   flatLast: number
   flats: Flat[]
+  image: string
 }
 
 interface Flat {
@@ -105,6 +108,7 @@ interface Flat {
   title: string
   area: string
   room: string
+  image: string
 }
 
 interface Parking {

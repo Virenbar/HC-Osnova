@@ -2,9 +2,8 @@
 const { params } = useRoute();
 const entrance = params.entrance as string;
 const floor = params.floor as string;
-const E = useData().getEntrance(entrance);
+
 const F = useData().getFloor(entrance, floor);
-const img = `/svg/turns/${E.title}/${F.title}.svg`;
 </script>
 <template>
   <div class="container py-3">
@@ -12,7 +11,7 @@ const img = `/svg/turns/${E.title}/${F.title}.svg`;
       <Title>Подъезд №{{ entrance }} - Этаж №{{ floor }}</Title>
       <div class="card-header">
         <b>
-          <NuxtLink to="../">
+          <NuxtLink :to="`/entrance/${entrance}/`">
             Подъезд №{{ entrance }}
           </NuxtLink>
           - Этаж №{{ floor }}
@@ -29,7 +28,7 @@ const img = `/svg/turns/${E.title}/${F.title}.svg`;
             </NuxtLink>
           </template>
         </div>
-        <CommonImage :src="img" />
+        <CommonImage :src="F.image" />
       </div>
     </div>
   </div>

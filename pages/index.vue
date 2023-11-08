@@ -3,8 +3,8 @@ const house = "https://наш.дом.рф/сервисы/каталог-ново
 const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
 </script>
 <template>
-  <div class="container py-3" style="max-width: 40rem;">
-    <div class="card mx-auto text-center">
+  <div class="container py-3">
+    <div class="card text-center">
       <div class="card-header">
         <b>Подъезды</b>
       </div>
@@ -13,7 +13,7 @@ const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
       </div>
     </div>
 
-    <div class="card mx-auto text-center m-1">
+    <div class="card text-center m-1">
       <div class="card-header">
         <b>Ссылки</b>
       </div>
@@ -41,3 +41,8 @@ const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
     </div>
   </div>
 </template>
+<style scoped>
+.container {
+  max-width: 40rem;
+}
+</style>

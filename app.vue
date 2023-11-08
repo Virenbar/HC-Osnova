@@ -2,12 +2,11 @@
 useHead({
   titleTemplate: (titleChunk: unknown) => { return titleChunk ? `${titleChunk} - ЖК Основа` : "ЖК Основа"; }
 });
-useSeoMeta({
+useServerSeoMeta({
   ogType: "website",
   ogTitle: "ЖК Основа",
   ogSiteName: "ЖК Основа",
-  description: "Сайт ЖК Основа",
-  ogUrl: computed(() => useRuntimeConfig().app.baseURL + useRoute().path.slice(1))
+  description: "Сайт ЖК Основа"
 });
 </script>
 <template>

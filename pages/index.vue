@@ -13,7 +13,7 @@ const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
       </div>
     </div>
 
-    <div class="card text-center m-1">
+    <div class="card text-center mt-1">
       <div class="card-header">
         <b>Ссылки</b>
       </div>

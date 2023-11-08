@@ -10,20 +10,13 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    "@nuxt/content",
     "@nuxtjs/color-mode",
     "@artmizu/yandex-metrika-nuxt",
-    "@funken-studio/sitemap-nuxt-3",
+    ["@funken-studio/sitemap-nuxt-3", { hostname: "https://virenbar.github.io" }],
     "@nuxt/image"
   ],
-  content: {
-    markdown: {
-      anchorLinks: false
-    }
-  },
   colorMode: { dataValue: "bs-theme" },
   yandexMetrika: { id: "87731504" },
-  sitemap: { hostname: "https://virenbar.github.io" },
   runtimeConfig: {
     public: {
       repository: "https://github.com/Virenbar/HC-Osnova",

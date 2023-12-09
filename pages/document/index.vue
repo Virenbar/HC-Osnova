@@ -11,7 +11,7 @@ const { documents, project } = useData();
       <div class="card-body">
         <ul>
           <li v-for="D in documents" :key="D.title">
-            <NuxtLink :to="useBaseURL(D.path)" target="_blank">
+            <NuxtLink :to="D.path" target="_blank">
               {{ D.title }}
             </NuxtLink>
           </li>

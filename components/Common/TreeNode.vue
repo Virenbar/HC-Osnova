@@ -4,7 +4,7 @@ import type { TreeNode } from "../../types";
 const props = defineProps<Props>();
 interface Props { node: TreeNode }
 
-const url = computed(() => useBaseURL(props.node.path));
+const url = computed(() => props.node.path);
 </script>
 <template>
   <ul>

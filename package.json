@@ -23,7 +23,7 @@
     "@nuxtjs/color-mode": "^3.3.2",
     "@types/bootstrap": "^5.2.10",
     "eslint": "^8.56.0",
-    "nuxt": "^3.9.0",
+    "nuxt": "^3.9.1",
     "sass": "^1.69.7",
     "sass-loader": "^13.3.3",
     "sitemap": "^7.1.1",

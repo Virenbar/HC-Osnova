@@ -22,7 +22,7 @@
     "@nuxt/image": "^1.5.0",
     "@nuxtjs/color-mode": "^3.3.3",
     "@types/bootstrap": "^5.2.10",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "nuxt": "^3.11.2",
     "sass": "^1.74.1",
     "sass-loader": "^14.1.1",

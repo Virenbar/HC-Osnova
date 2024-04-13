@@ -22,5 +22,6 @@
   "eslint.validate": [
     "javascript",
     "typescript"
-  ]
+  ],
+  "eslint.experimental.useFlatConfig": true
 }

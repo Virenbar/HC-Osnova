@@ -21,4 +21,3 @@ const { documents, project } = useData();
     </div>
   </div>
 </template>
-

@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     }
   },
   modules: [
+    "@nuxt/eslint",
     "@nuxtjs/color-mode",
     "@artmizu/yandex-metrika-nuxt",
     ["@funken-studio/sitemap-nuxt-3", { hostname: "https://virenbar.github.io" }],

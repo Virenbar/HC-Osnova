@@ -18,7 +18,7 @@
   "devDependencies": {
     "@artmizu/yandex-metrika-nuxt": "^1.0.4",
     "@funken-studio/sitemap-nuxt-3": "^4.0.4",
-    "@nuxt/eslint": "^0.3.6",
+    "@nuxt/eslint": "^0.3.8",
     "@nuxt/image": "^1.5.0",
     "@nuxtjs/color-mode": "^3.3.3",
     "@types/bootstrap": "^5.2.10",

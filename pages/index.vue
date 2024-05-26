@@ -39,6 +39,17 @@ const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
         </div>
       </div>
     </div>
+
+    <div class="card text-center mt-1">
+      <div class="card-header">
+        <b>Карта</b>
+      </div>
+      <div class="card-body">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A77326403ebfcc5883a09d33c5c4e51060d9417fe1e12ce5570b3ff80ad5c02ec&amp;source=constructor"
+          width="100%" height="500" frameborder="1" />
+      </div>
+    </div>
   </div>
 </template>
 <style scoped>

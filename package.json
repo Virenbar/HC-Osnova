@@ -22,12 +22,12 @@
     "@nuxt/image": "^1.7.0",
     "@nuxtjs/color-mode": "^3.4.2",
     "@types/bootstrap": "^5.2.10",
-    "eslint": "^9.7.0",
+    "eslint": "^9.8.0",
     "nuxt": "^3.12.4",
     "sass": "^1.77.8",
     "sass-loader": "^14.2.1",
     "sitemap": "^8.0.0",
-    "typescript": "^5.5.3",
+    "typescript": "^5.5.4",
     "webpack": "^5.93.0"
   },
   "private": true

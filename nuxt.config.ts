@@ -25,6 +25,5 @@ export default defineNuxtConfig({
       hash: process.env.COMMIT_REF || "unknown",
       date: new Date().toISOString()
     }
-  },
-  devtools: { enabled: false } //Windows 7 = false
+  }
 });

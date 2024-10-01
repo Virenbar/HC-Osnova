@@ -20,15 +20,15 @@
     "@funken-studio/sitemap-nuxt-3": "^4.0.4",
     "@nuxt/eslint": "^0.5.5",
     "@nuxt/image": "^1.8.0",
-    "@nuxtjs/color-mode": "^3.4.4",
+    "@nuxtjs/color-mode": "^3.5.1",
     "@types/bootstrap": "^5.2.10",
-    "eslint": "^9.9.1",
+    "eslint": "^9.11.1",
     "nuxt": "^3.13.1",
-    "sass": "^1.77.8",
-    "sass-loader": "^16.0.1",
+    "sass": "^1.79.4",
+    "sass-loader": "^16.0.2",
     "sitemap": "^8.0.0",
-    "typescript": "^5.5.4",
-    "webpack": "^5.94.0"
+    "typescript": "^5.6.2",
+    "webpack": "^5.95.0"
   },
   "private": true
 }

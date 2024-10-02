@@ -10,11 +10,11 @@ export default defineNuxtConfig({
     }
   },
   modules: [
-    "@nuxt/eslint",
-    "@nuxtjs/color-mode",
     "@artmizu/yandex-metrika-nuxt",
-    ["@funken-studio/sitemap-nuxt-3", { hostname: "https://virenbar.github.io" }],
-    "@nuxt/image"
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxtjs/color-mode",
+    ["@nuxtjs/sitemap", { name: "HC Osnova", site: "https://virenbar.github.io" }]
   ],
   colorMode: { dataValue: "bs-theme" },
   yandexMetrika: { id: "87731504" },

@@ -1,6 +1,5 @@
 import data from "../data/data.json" assert { type: "json" };
 import projectRAW from "../data/project.json" assert { type: "json" };
-import type { TreeNode } from "../types";
 
 // 4 и 5 перепутаны
 data[2].turnId = "5";

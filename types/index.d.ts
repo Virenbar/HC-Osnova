@@ -1,4 +1,4 @@
-export interface TreeNode {
+interface TreeNode {
   title: string
   path?: string
   child?: TreeNode[]

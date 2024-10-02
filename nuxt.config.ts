@@ -1,3 +1,10 @@
+import { execSync } from "child_process";
+
+const exec = (command: string) => execSync(command).toString().trim();
+const branch = exec("git branch --show-current");
+const hash = exec("git rev-parse HEAD");
+const date = new Date().toISOString();
+
 export default defineNuxtConfig({
   css: [
     "@/assets/css/styles.scss"
@@ -21,9 +28,10 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       repository: "https://github.com/Virenbar/HC-Osnova",
-      branch: process.env.HEAD || "master",
-      hash: process.env.COMMIT_REF || "unknown",
-      date: new Date().toISOString()
+      branch,
+      hash,
+      date
     }
-  }
+  },
+  compatibilityDate: "2024-10-02"
 });

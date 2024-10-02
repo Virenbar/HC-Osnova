@@ -1,12 +1,28 @@
 <script setup lang="ts">
+const title = "ЖК Основа";
+const description = "Сайт ЖК Основа";
+const logo = useBaseURL("/favicon/mstile-70x70.png");
 useHead({
-  titleTemplate: (titleChunk: unknown) => { return titleChunk ? `${titleChunk} - ЖК Основа` : "ЖК Основа"; }
+  titleTemplate: (t) => (t ? `${t} - ` : "") + title,
+  meta: [
+    { name: "description", content: description }
+  ],
+  htmlAttrs: {
+    lang: "ru"
+  }
 });
-useServerSeoMeta({
+useSeoMeta({
   ogType: "website",
-  ogTitle: "ЖК Основа",
-  ogSiteName: "ЖК Основа",
-  description: "Сайт ЖК Основа"
+  ogTitle: title,
+  ogSiteName: title,
+  ogUrl: "https://virenbar.github.io/HC-Osnova/",
+  ogDescription: description,
+  ogImage: logo,
+  ogImageSecureUrl: logo,
+  twitterTitle: title,
+  twitterDescription: description,
+  twitterImage: logo,
+  twitterCard: "summary"
 });
 </script>
 <template>

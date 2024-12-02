@@ -21,10 +21,14 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/image",
     "@nuxtjs/color-mode",
-    ["@nuxtjs/sitemap", { name: "HC Osnova", site: "https://virenbar.github.io" }]
+    "@nuxtjs/sitemap"
   ],
   colorMode: { dataValue: "bs-theme" },
   yandexMetrika: { id: "87731504" },
+  site: {
+    name: 'HC Osnova',
+    url: 'https://virenbar.github.io'
+  },
   runtimeConfig: {
     public: {
       repository: "https://github.com/Virenbar/HC-Osnova",

@@ -1,21 +1,11 @@
 import { execSync } from "child_process";
 
 const exec = (command: string) => execSync(command).toString().trim();
-const branch = exec("git branch --show-current");
-const hash = exec("git rev-parse HEAD");
+const branch = exec("git branch --show-current") || process.env.HEAD;
+const hash = exec("git rev-parse HEAD") || process.env.COMMIT_REF;
 const date = new Date().toISOString();
 
 export default defineNuxtConfig({
-  css: [
-    "@/assets/css/styles.scss"
-  ],
-  app: {
-    head: {
-      script: [
-        { src: "https://kit.fontawesome.com/3d652cc361.js", crossorigin: "anonymous" }
-      ]
-    }
-  },
   modules: [
     "@artmizu/yandex-metrika-nuxt",
     "@nuxt/eslint",
@@ -26,8 +16,8 @@ export default defineNuxtConfig({
   colorMode: { dataValue: "bs-theme" },
   yandexMetrika: { id: "87731504" },
   site: {
-    name: 'HC Osnova',
-    url: 'https://virenbar.github.io'
+    name: "HC Osnova",
+    url: "https://virenbar.github.io"
   },
   runtimeConfig: {
     public: {

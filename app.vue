@@ -3,26 +3,23 @@ const title = "ЖК Основа";
 const description = "Сайт ЖК Основа";
 const logo = useBaseURL("/favicon/mstile-70x70.png");
 useHead({
-  titleTemplate: (t) => (t ? `${t} - ` : "") + title,
-  meta: [
-    { name: "description", content: description }
-  ],
-  htmlAttrs: {
-    lang: "ru"
-  }
+  titleTemplate: (chunk) => (chunk ? `${chunk} - ` : "") + title,
+  meta: [{ name: "description", content: description }],
+  script: [{ src: "https://kit.fontawesome.com/3d652cc361.js", crossorigin: "anonymous" }],
+  htmlAttrs: { lang: "ru" }
 });
 useSeoMeta({
-  ogType: "website",
-  ogTitle: title,
-  ogSiteName: title,
-  ogUrl: "https://virenbar.github.io/HC-Osnova/",
   ogDescription: description,
   ogImage: logo,
   ogImageSecureUrl: logo,
-  twitterTitle: title,
+  ogSiteName: title,
+  ogTitle: title,
+  ogType: "website",
+  ogUrl: "https://virenbar.github.io/HC-Osnova/",
+  twitterCard: "summary",
   twitterDescription: description,
   twitterImage: logo,
-  twitterCard: "summary"
+  twitterTitle: title
 });
 </script>
 <template>
@@ -35,3 +32,6 @@ useSeoMeta({
     <PageFooter />
   </div>
 </template>
+<style lang="scss">
+@use "~/assets/css/styles.scss";
+</style>

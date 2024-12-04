@@ -16,6 +16,7 @@
     "bootstrap": "^5.3.3"
   },
   "devDependencies": {
+    "vue": "latest",
     "@artmizu/yandex-metrika-nuxt": "^1.0.4",
     "@nuxt/eslint": "^0.7.2",
     "@nuxt/image": "^1.8.1",
@@ -24,10 +25,11 @@
     "@types/bootstrap": "^5.2.10",
     "eslint": "^9.16.0",
     "nuxt": "^3.14.1592",
-    "sass": "^1.81.0",
     "sass-loader": "^16.0.3",
+    "sass": "^1.81.0",
     "sitemap": "^8.0.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5.7.2",
+    "vue-router": "latest"
   },
   "private": true
 }

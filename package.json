@@ -17,18 +17,18 @@
   },
   "devDependencies": {
     "vue": "latest",
-    "@artmizu/yandex-metrika-nuxt": "^1.0.4",
+    "@artmizu/yandex-metrika-nuxt": "^1.1.0",
     "@nuxt/eslint": "^0.7.6",
     "@nuxt/image": "^1.9.0",
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/sitemap": "^6.1.5",
     "@types/bootstrap": "^5.2.10",
-    "eslint": "^9.16.0",
+    "eslint": "^9.19.0",
     "nuxt": "^3.15.4",
-    "sass-loader": "^16.0.3",
-    "sass": "^1.81.0",
+    "sass-loader": "^16.0.4",
+    "sass": "^1.83.4",
     "sitemap": "^8.0.0",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "vue-router": "latest"
   },
   "private": true

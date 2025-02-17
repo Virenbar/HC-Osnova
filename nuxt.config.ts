@@ -27,5 +27,15 @@ export default defineNuxtConfig({
       date
     }
   },
+  // Silencing the deprecation warnings
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          silenceDeprecations: ["mixed-decls", "color-functions", "global-builtin", "import"]
+        },
+      }
+    }
+  },
   compatibilityDate: "2024-10-02"
 });

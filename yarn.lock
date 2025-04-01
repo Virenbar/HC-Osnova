@@ -871,7 +871,7 @@
     pathe "^2.0.2"
     unimport "^4.0.0"
 
-"@nuxt/image@^1.9.0":
+"@nuxt/image@^1.10.0":
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-1.10.0.tgz#dda5fbc0420b9b6f64e2d67d4b74942c3d2c1323"
   integrity sha512-/B58GeEmme7bkmQUrXzEw8P9sJb9BkMaYZqLDtq8ZdDLEddE3P4nVya8RQPB+p4b7EdqWajpPqdy1A2ZPLev/A==

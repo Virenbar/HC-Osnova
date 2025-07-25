@@ -9,6 +9,6 @@ async function resetFocus() {
  */
 export default function () {
   useRouter().afterEach((to, from) => {
-    if (to.path == "/" || from.path !== to.path) { nextTick(resetFocus); }
+    if (to.path == '/' || from.path !== to.path) nextTick(resetFocus);
   });
 }

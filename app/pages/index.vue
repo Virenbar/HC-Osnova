@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const house = "https://наш.дом.рф/сервисы/каталог-новостроек/объект";
-const guid = "88083f91-817d-4629-bf36-2abfc06d790a";
+const house = 'https://наш.дом.рф/сервисы/каталог-новостроек/объект';
+const guid = '88083f91-817d-4629-bf36-2abfc06d790a';
 </script>
 <template>
   <div class="container py-3">

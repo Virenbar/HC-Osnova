@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<Props>();
 definePageMeta({
-  layout: false
+  layout: false,
 });
 
-const statusCode = computed(() => "statusCode" in props.error ? props.error.statusCode : undefined);
+const statusCode = computed(() => 'statusCode' in props.error ? props.error.statusCode : undefined);
 
 interface Props {
-  error: Object
+  error: object
 }
 </script>
 <template>

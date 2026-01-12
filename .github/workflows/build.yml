@@ -13,7 +13,7 @@ jobs:
       NUXT_APP_BASE_URL: /HC-Osnova/
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           lfs: true
 

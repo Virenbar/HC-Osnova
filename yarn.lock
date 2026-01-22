@@ -2100,10 +2100,12 @@
   dependencies:
     undici-types "~7.13.0"
 
-"@types/node@^17.0.5":
-  version "17.0.45"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.45.tgz#2c0fafd78705e7a18b7906b5201a522719dc5190"
-  integrity sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==
+"@types/node@^24.9.2":
+  version "24.10.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-24.10.9.tgz#1aeb5142e4a92957489cac12b07f9c7fe26057d0"
+  integrity sha512-ne4A0IpG3+2ETuREInjPNhUGis1SFjv1d5asp8MzEAGtOZeTeHVDOYqOgqfhvseqg/iXty2hjBf1zAOb7RNiNw==
+  dependencies:
+    undici-types "~7.16.0"
 
 "@types/parse-path@^7.0.0":
   version "7.1.0"
@@ -6183,12 +6185,12 @@ site-config-stack@3.2.17:
   dependencies:
     ufo "^1.6.2"
 
-sitemap@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-8.0.2.tgz#27bddb5fc2c61a1cf8f0194674cd89d762c9f5ae"
-  integrity sha512-LwktpJcyZDoa0IL6KT++lQ53pbSrx2c9ge41/SeLTyqy2XUNA6uR4+P9u5IVo5lPeL2arAcOKn1aZAxoYbCKlQ==
+sitemap@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/sitemap/-/sitemap-9.0.0.tgz#c5d5a1c7564b6b87ac836b0edfb3ebc667a5bb05"
+  integrity sha512-J/SU27FJ+I52TcDLKZzPRRVQUMj0Pp1i/HLb2lrkU+hrMLM+qdeRjdacrNxnSW48Waa3UcEOGOdX1+0Lob7TgA==
   dependencies:
-    "@types/node" "^17.0.5"
+    "@types/node" "^24.9.2"
     "@types/sax" "^1.2.1"
     arg "^5.0.0"
     sax "^1.4.1"
@@ -6610,6 +6612,11 @@ undici-types@~7.13.0:
   version "7.13.0"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.13.0.tgz#a20ba7c0a2be0c97bd55c308069d29d167466bff"
   integrity sha512-Ov2Rr9Sx+fRgagJ5AX0qvItZG/JKKoBRAVITs1zk7IqZGTJUwgUr7qoYBpWwakpWilTZFM98rG/AFRocu10iIQ==
+
+undici-types@~7.16.0:
+  version "7.16.0"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.16.0.tgz#ffccdff36aea4884cbfce9a750a0580224f58a46"
+  integrity sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==
 
 unenv@^2.0.0-rc.24:
   version "2.0.0-rc.24"

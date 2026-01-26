@@ -10,7 +10,6 @@ export default defineNuxtConfig({
   modules: [
     '@artmizu/yandex-metrika-nuxt',
     '@nuxt/eslint',
-    // '@nuxt/image',
     '@nuxtjs/color-mode',
     '@nuxtjs/sitemap',
   ],
@@ -24,12 +23,19 @@ export default defineNuxtConfig({
     public: { repository, branch, hash, date },
   },
   compatibilityDate: '2025-07-26',
+  // Create sitemap with nuxt build
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/', '/sitemap.xml'],
+    },
+  },
   // Silencing the deprecation warnings
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          silenceDeprecations: ['color-functions', 'global-builtin', 'import'],
+          silenceDeprecations: ['color-functions', 'global-builtin', 'import', 'if-function'],
         },
       },
     },

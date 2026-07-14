@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const house = 'https://наш.дом.рф/сервисы/каталог-новостроек/объект';
 const guid = '88083f91-817d-4629-bf36-2abfc06d790a';
+const gis_old = `https://dom.gosuslugi.ru/#!/house-view?guid=${guid}&typeCode=1`
+const gis_new = `https://portal.dom.gosuslugi.ru/home/${guid}`
 </script>
 <template>
   <div class="container py-3">
@@ -18,7 +20,7 @@ const guid = '88083f91-817d-4629-bf36-2abfc06d790a';
         <b>Ссылки</b>
       </div>
       <div class="card-body">
-        <div class="text-8xl">
+        <div class="m-1">
           Дом на ДОМ.РФ
         </div>
         <div class="btn-group">
@@ -33,8 +35,14 @@ const guid = '88083f91-817d-4629-bf36-2abfc06d790a';
           </ButtonLink>
         </div>
         <div class="m-1">
-          <ButtonLink :to="`https://dom.gosuslugi.ru/#!/house-view?guid=${guid}&typeCode=1`">
-            ГИС ЖКХ
+          Дом на ГИС ЖКХ
+        </div>
+        <div class="btn-group">
+          <ButtonLink :to=gis_new>
+            Новый
+          </ButtonLink>
+          <ButtonLink :to=gis_old>
+            Старый
           </ButtonLink>
         </div>
       </div>

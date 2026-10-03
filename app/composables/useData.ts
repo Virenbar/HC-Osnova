@@ -1,5 +1,5 @@
-import data from '../../data/data.json' assert { type: 'json' };
-import projectRAW from '../../data/project.json' assert { type: 'json' };
+import data from '../../data/data.json' with { type: 'json' };
+import projectRAW from '../../data/project.json' with { type: 'json' };
 
 // 4 и 5 перепутаны
 data[2]!.turnId = '5';
